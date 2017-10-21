@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+   snowflake.html
+   
+   Copyright 2017 Francisco manuel alexander
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Airin</title>
+    <style>
+        @keyframes dentro {
+            0% {opacity:0}
+            100%   {opacity:1}
+        }
+        @keyframes fuera {
+            0% {opacity:1}
+            100%   {opacity:0;display:none}
+        }
+       
+        .class_idea_principal{
+            display:none;
+            
+        }
+        .class_copo_1{
+            display:none;
+            
+         
+        }
+        .class_copo_1 p {
+            display: inline;
+            vertical-align: top;
+        }
+        .class_copo_2{
+            display:none;
+            font-family: "petiso";
+            src:"petiso.ttf"; 
+         
+        }
+        .snowflake {
+          color: #fff;
+          font-size: 1em;
+          font-family: Arial;
+          text-shadow: 0 0 1px #000;
+        }
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
+
+        #contenedor_principal_copos{
+            width: 50%;
+            margin-top:2%;
+            margin-left:20%;
+        }
+        #contenedor_principal{
+            width:90%;
+            height:100%;
+            margin-left:5%;
+            text-align: justify;
+            text-justify: inter-word;
+            color:white;
+        }
+        h1{
+            text-align:center;
+        }
+        body{
+            background:black;
+        }
+    </style>
+
+</head>
+
+<body>
+ <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+    </div>
+    <div id="contenedor_principal" name="contenedor_principal">
+        <h1>
+                Uso del método de copitos de nieve para crear una historia
+        </h1>
+        <div id="contenedor_introduccion" name="contenedor_introduccion">
+            <p>Despúes de ver el vídeo de Doppie Ganger, <a href="https://www.youtube.com/watch?v=AyIn4EMa_xM">Método snowflake - Cómo estructurar tus historias al escribir</a> Decidí escribir un pequeño relato de 500 palabras. Y luego pensé, anda si sé programar. Así que decidí hacer algo para que a la vez que leeis mi relato os sirva para entender el método. Lo único que tenéis que ir haciendo es ir dandole al botón que pone lanzar copitos de nieve y la historia irá creciendo.</p>
+        </div>
+        <div id="contenedor_boton" name="contenedor_boton">
+             <button type="button" id="button_snowflake" name="button_snowflake" onclick="snowflake()">Lanzar copitos de nieve</button> 
+        </div> 
+        
+        <div id="contenedor_principal_copos" name="contenedor_principal_copos">
+            <div id="copo_idea_principal" name="copo_idea_principal" class="class_idea_principal" >
+                Airin toca el violín asombrando al público asistente.
+            </div>
+            <div id="copo_1" name="copo_1" class="class_copo_1" >
+                <p>Airin es un niño que vieve en el barrio obrero de la ciudad. </p><p>Él es torpe y su entornos no para de meterse con él. </p><p>Le llega un violín a sus manos. </p><p>Con mucho esfuerzo y dificultades consigue aprender a tocar. </p><p>Airin toca el violín en un concierto y asombra a todo el mundo.</p>
+            </div>
+            <div id="copo_2" name="copo_2" class="class_copo_2" >
+                <p>
+                    Airin sale de su casa. Baja los escalones cabizbajo, sumido en sus pensamientos. Al acabar las escaleras se acerca a su buzón para comprobar si hay alguna carta. Solo publicidad del taller de la esquina. Sale por la puerta y observa su barrio; mujeres y hombres correteando de un lado a otro sin detenerse nada más que en los semáforos; listos para empezar otro día de trabajo rutinario.
+                </p>
+                <p>
+                   Suena el timbre que indica el comienzo de las clases y Airin camina a su pupitre cuan tropieza y cae rodando al suelo. Sus compañeros estallan en carcajadas. Él resopla, se levanta. Mira sus zapatillas y ve los cordones desatados, otra vez se le han soltado; no consigo nunca atarmelos bien, piensa. Asumiendo su torpeza abre su mochila para sacar los libros y los nota todos mojados. El zumo para el recreo se le ha roto. Bien, parece que este día va a seguir la rutina de siempre, se dice.
+                
+                </p>
+                <p>
+                    Todavía no se lo cree, lo que prometía como un día de torpeza rutinaria se ha convertido en algo maravilloso. Primero ha visto al mendigo tocar con su violín y horas más tarde él tiene uno en sus manos. Esa señora se lo ha regalado sin más. Pero Airin detiene en seco su repaso. Mira al violín y baja la cabeza. Piensa que no se lo merece, que lo va a estropear; debería devolverlo a la tienda. Dale una oportunidad. Una debil voz resuena en su interior. Sí, lo haré. Airin levanta la cabeza y dice; aprenderé a tocar el violín cueste lo que cueste. Antes de subir a casa decide probar en el callejón.
+               
+                </p>
+                <p>
+                    Han pasado siete meses desde que Airin empezó su aprendizaje con el violín,le parece toda una eternidad. Tumbado en la cama recuerda todas y cada una de las cosas que le han sucedido en este tiempo. Desde luego mi vida ya no es igual, concluye. Aunque no estoy listo para el concierto de año nuevo, no me veo preparado. Malditos cambios de segunda a cuarta posición. Grita enfadado. Se levanta, mira a su violín que se enciende al percibir que se acerca. Unas palabras se fijan en su mente. No seré capaz de hacerlo. Abandono. En el violín aparecen las palabras "No te rindas". Airin sonrie; No,no lo haré. Y empieza a tocar.
+                
+                </p>
+                <p>
+                    El día lo empezó derramandose el tazón de leche encima, tropezando con sus cordones y golpeandose con la estantería. Parecía haber vuelto a las andadas del mundo de la torpeza. Le sudaban las manos antes de empezar el concierto de año nuevo. De los nervios casi se desmaya en el escenario, pero por fortuna miró al fondo de la sala y allí estaba. Su amiga Vicky había conseguido venir. Todos los problemas desaparecieron y la actuación fue un exito. Airin guarda su violín, se despide de las personas que formaban la orquesta y se va a celebrar su exito con las personas que le han apoyado. En el violín aparece iluminada la palabra "Enhorabuena".
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let contador=0;
+        function snowflake(){
+            let idea_principal =     document.getElementById('copo_idea_principal');
+            let copo_1 =     document.getElementById('copo_1');
+            let copo_2 =     document.getElementById('copo_2');
+            contador++;
+            switch(contador) {
+                case 1:
+                    idea_principal.style.animationName='dentro';
+                    idea_principal.style.animationDuration='4s';
+                    idea_principal.style.animationFillMode = 'forwards';
+                    idea_principal.style.display = 'block';
+                    copo_1.style.display = 'none';
+                    copo_2.style.display = 'none';                    
+                    break;                
+                case 2:
+                    copo_1.style.animationName='dentro';
+                    copo_1.style.animationDuration='4s';
+                    copo_1.style.animationFillMode = 'forwards';
+                    idea_principal.style.display = 'none';
+                    copo_1.style.display = 'block';
+                    copo_2.style.display = 'none';        
+                    break;
+                case 3:
+                    copo_2.style.animationName='dentro';
+                    copo_2.style.animationDuration='4s';
+                    copo_2.style.animationFillMode = 'forwards';
+                    idea_principal.style.display = 'none';
+                    copo_1.style.display = 'none';
+                    copo_2.style.display = 'block';  
+                    contador=0;      
+                    break;
+                default:
+                    contador=0;
+                    break;
+                    
+            } 
+            
+        }
+    </script>
+</body>
+
+</html>
